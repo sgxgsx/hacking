@@ -87,4 +87,5 @@ Reputation Defender
 Trackur
 
 
-whois, dnsrecon                                          ::::::::::
+whois, dnsrecon, ping, traceroute, nslookup (some traceroute gui for mapping)                     ::::::::::
+
