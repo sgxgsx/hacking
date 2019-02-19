@@ -13,4 +13,4 @@ www.certifiedhacker.com      -> authoritative answer
 
 Lab 2
 
-pipl.com                            -> brilliant source
+pipl.com                            -> a brilliant source
