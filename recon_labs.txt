@@ -14,3 +14,28 @@ www.certifiedhacker.com      -> authoritative answer
 Lab 2
 
 pipl.com                            -> a brilliant source
+
+Lab 3
+firebug .... used wig
+
+Lab 4
+extract data... used wig, metagoofil (couldn't scrap emails, idk y)
+
+Lab 5
+mirror a site
+httrack or webhttrack
+
+Lab 6
+Trace email. easy
+
+Lab 7
+whois or (i would use maltego)
+
+Lab 8
+traceroute
+
+Lab 9
+maltego
+
+Lab 10
+recon-ng
