@@ -38,4 +38,20 @@ Lab 9
 maltego
 
 Lab 10
-recon-ng
+recon-ng network reconnaissance
+
+Lab 11
+recon-ng personnel info gathering
+recon/domains-contacts/whois_pocs
+recon/profiles-profiles/profiler
+recon/profiles-profiles/namechk
+
+Lab 12
+recon-ng locations
+
+Lab 13
+foca
+
+Lab 14
+vulnerability identification
+SearchDiggity was suggested to be used, but i've found zoomeye.org and seebug.org
