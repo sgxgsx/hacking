@@ -1,0 +1,24 @@
+hping3
+
+nmap
+-sT - full open scan
+-sS - half-open scan
+-sX -v - xmas scan
+-sF - FIN scan
+-sN - NULL scan
+-sU -v - udp scan
+-T 1-5  (1-safe 5-inscane)
+-f // --mtu 8 - fragmentation
+-D RND:10 - spoofed + you IP
+
+
+Proxy Switcher
+Proxy Workbench
+Tor
+CyberGhost
+
+cp.opu.ua
+80/tcp  open  http    syn-ack ttl 58
+443/tcp open  https   syn-ack ttl 58
+
+
