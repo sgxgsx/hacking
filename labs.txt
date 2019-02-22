@@ -11,14 +11,77 @@ nmap
 -f // --mtu 8 - fragmentation
 -D RND:10 - spoofed + you IP
 
+Enumeration nmap:
+-sU - udp scan
+-sP - ping sweep
+-sS - stealthy scan
+-sSV -O - operating system & version scan
 
+NetBIOS scan on linux:
+nbstat
+Other tools:
+Hyena | Winfingerprint | NetBIOS Enumerator | Nsauditor Network Security Auditor
+
+SNMP enumeration:
+OpUtils
+SolarWinds Engineer's Toolset
+
+LDAP enumeration:
+idk
+
+NTP enumeration:
+ntpdc
+-i - interactive mode
+-n - display ip in xxx.xxx.xxx.xxx form
+-l - display list of peers known to server
+-p - display list of peers known to server with their states
+-s - as -p but in different format
+
+ntptrace - trace from given host NTP server to the primary source
+ntpq
+-c - arg is interpreted as an interactive format command ...
+-d - debugging mode
+-i - interactive mode
+-n - display ip in xxx.xxx.xxx.xxx form
+-p - display list of peers known to  server with their states
+-4 - DNS resolution to ip4
+-6 - DNS resolution to ip6
+
+tools - nmap, NTP server Scanner, Wireshark, NTPQuery
+
+SMTP enumeration:
+smtp-user-enum
+telnet
+NetScan Tool Pro
+
+DNS Zone Transfer enum
+nslookup with commands
+ls -d 
+set type=any/a/cname
+server <server>
+
+--------------------------------------
+Enumeration using email ID
+enum using default passwords
+enum using SNMP
+brute force attack on Active dir
+enum through DNS zone transfer
+
+todo:
+dns zone transfer tcp 53
+dns queries udp 53
+snmp udp 161
+snmp trap tcp/udp 162
+microsoft rpc endpoint mapper tcp/udp 135
+ldap tcp/udp 389
+nbns tcp/udp 137
+global catalog service tcp/udp 3268
+netbios tcp 139
+smtp tcp 25
+
+---------------------
 Proxy Switcher
 Proxy Workbench
 Tor
 CyberGhost
-
-cp.opu.ua
-80/tcp  open  http    syn-ack ttl 58
-443/tcp open  https   syn-ack ttl 58
-
-
+------------------------
