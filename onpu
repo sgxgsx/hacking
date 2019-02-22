@@ -1,0 +1,32 @@
+cp.opu.ua
+80/tcp  open  http    syn-ack ttl 58
+443/tcp open  https   syn-ack ttl 58
+
+----------------------------------------
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Apache httpd 2.2.15 ((CentOS))
+| http-git: 
+|   91.194.79.34:80/.git/
+|     Git repository found!
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|     Remotes:
+|       git@bitbucket.org:onpuweb/onpuweb.git
+|_    Project type: Java application (guessed from .gitignore)
+| http-robots.txt: 10 disallowed entries 
+| /admin /classes /jscripts /templates /templates_c /css 
+|_/libs /php */tcpdf /*?*
+|_http-title: \xD0\x9E\xD0\xB4\xD0\xB5\xD1\x81\xD1\x8C\xD0\xBA\xD0\xB8\xD0\xB9 \xD0\xBD\xD0\xB0\xD1\x86\xD1\x96\xD0\xBE\xD0\xBD\xD0\xB0\xD0\xBB\xD1\x8C\xD0\xBD\xD0\xB8\xD0\xB9 \xD0\xBF\xD0\xBE\xD0\xBB\xD1\x96\xD1\x82\xD0\xB5\xD1\x85\xD0\xBD\xD1\x96\xD1\x87...
+443/tcp open  ssl/http Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: \xD0\xA2\xD0\xB5\xD1\x85\xD0\xBD\xD0\xB8\xD1\x87\xD0\xB5\xD1\x81\xD0\xBA\xD0\xB8\xD0\xB5 \xD1\x80\xD0\xB0\xD0\xB1\xD0\xBE\xD1\x82\xD1\x8B
+| ssl-cert: Subject: commonName=cp.opu.ua/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2017-06-10T20:58:25
+|_Not valid after:  2018-06-10T20:58:25
+|_ssl-date: 2019-02-22T22:40:44+00:00; -1s from scanner time.
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
