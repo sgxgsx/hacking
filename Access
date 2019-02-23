@@ -1,0 +1,29 @@
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 425 Cannot open data connection.
+| ftp-syst: 
+|_  SYST: Windows_NT
+23/tcp open  telnet?
+80/tcp open  http    Microsoft IIS httpd 7.5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: MegaCorp
+
+
+ftp:
+  login -> anonymous
+  passw -> any
+
+telnet:
+  login -> security
+  passw -> 4Cc3ssC0ntr0ller
+
+
+mdb file /root/Hacks/backup.mdb
+open it - https://mdbviewer.herokuapp.com/
+
+Microsoft IIS 7.5 vuln:
+https://www.cvedetails.com/vulnerability-list.php?vendor_id=26&product_id=3436&version_id=92758&page=1&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=0&cweid=0&order=1&trc=5&sha=a2bdb2ecdf4e4f1e07a98d4381990b73ffa6e3f9
+
