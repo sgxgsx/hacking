@@ -27,3 +27,7 @@ open it - https://mdbviewer.herokuapp.com/
 Microsoft IIS 7.5 vuln:
 https://www.cvedetails.com/vulnerability-list.php?vendor_id=26&product_id=3436&version_id=92758&page=1&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=0&cweid=0&order=1&trc=5&sha=a2bdb2ecdf4e4f1e07a98d4381990b73ffa6e3f9
 
+
+
+
+runas /user:Administrator /savecred
