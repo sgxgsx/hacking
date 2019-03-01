@@ -1,0 +1,37 @@
+Vertical priv esc
+Horizontal priv esc
+
+
+known DLLs' in WIndows: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SessionManager\
+
+Techniques:
+	DLL hijacking          (tool -> Metasploit)
+
+
+
+
+
+
+
+
+Maintaining access && gathering intelligence:
+
+Keyloggers:
+    Software keyloggers:
+	Application Keyloggers
+	Kernel Keyloggers
+	Hypervisor-based Keyloggers
+	Form Grabbing based Keyloggers
+    Hardware keyloggers:
+	PC/BIOS Embedded Keyloggers
+	Keyloggers Keyboard
+	External Keyloggers
+
+www.keydemon.com  // www.keyghost.com   //  www.keycobra.com
+
+Anti-keyloggers:
+    www.zemana.com
+    www.spyshelter.com
+    anti-keyloggers.com
+
+
