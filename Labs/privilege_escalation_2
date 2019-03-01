@@ -34,4 +34,55 @@ Anti-keyloggers:
     www.spyshelter.com
     anti-keyloggers.com
 
+Spyware
+	Adware
+	System monitors
+	tracking cookies
+	trojans
+Rootkits
+	Application level
+	Kernel level
+	Hardware/Firmware level
+	Hypervisor level
+	Boot loader level
+    tools:
+	Avatar
+	Necurs
+	Azazel
+	ZeroAccess
+Steganography
+	Whitespace Steganography
+	Image Steganography
+	Image Steganography
+	Document Steganography
+	Video Steganography
+	Audio Steganography
+	Folder Steganography
+	Spam/Email Steganography
+Steganalysis
+	Stego-only
+	known stego
+	known message
+	known cover
+	chosen message
+	chosen stego
+
+Covering tracks
+	disable auditing
+		in win -> auditpol
+		 	in C:\WIndows\system32***\ 
+			auditpol /set /category:"System","Account logon" /success:enable /failure:enable
+			auditpol /list /category /v
+			auditpol /get /category
+			
+			CLEAR -----> auditpol /clear
+	clearing logs
+		in win -> ??
+		in linux -> del /var/log
+	manipulating|modify logs 
+	clear cache
+	clear cookies
+	clear temporary files
+	clearing most recent used MRU
+
 
