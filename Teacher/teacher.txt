@@ -22,3 +22,9 @@ OS:=S)
 curl http://10.10.10.153/images/5.png
 Giovanni  -> Th4C00lTheacha       -> Th4C00lTheacha#     guessed
 http://10.10.10.153/moodle/
+
+Admin User
+Cookie: MoodleSession=2cfvjkmtj5vp54rsi47kfosi24
+edit=&sesskey=hHG6nWAZxf
+
+
