@@ -56,5 +56,14 @@ Owned user
 good resource
 https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/
 
+https://github.com/DominicBreuker/pspy
 -------------------------------------------------------------------------
 
+/usr/bin/backup.sh
+wildcard injection
+symlink attack
+
+used symlink attack to get root.txt
+renamed courses directory
+ln -s /root courses
+got root.txt
