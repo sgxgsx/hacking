@@ -1,0 +1,8 @@
+/
+/img/
+/js/
+/icons/
+/js/bootstrap.min.js
+/js/jquery.min.js
+/js/scripts.js
+/js/popper.min.js
