@@ -21,6 +21,3 @@ PORT    STATE         SERVICE
 67/udp  open|filtered dhcps
 161/udp open          snmp
 
-used msf -> /unix/irc/unreal_ircd_3281_backdoor to get a low-privileged shell
-
-

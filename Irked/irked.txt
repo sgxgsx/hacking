@@ -6,3 +6,7 @@ PORT    STATE SERVICE
 
 djmardov@irked.htb
 
+used msf -> /unix/irc/unreal_ircd_3281_backdoor to get a low-privileged shell
+python -c 'import pty; pty.spawn("/bin/shell");'
+
+
