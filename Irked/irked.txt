@@ -1,0 +1,8 @@
+
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+111/tcp open  rpcbind
+
+djmardov@irked.htb
+
