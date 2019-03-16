@@ -5,5 +5,7 @@
 
 hackthebox machines:
   
-  Access - user and system owned
-  Teacher - user owned
+  Access  - user and system owned
+  Teacher - user and system owned
+  Carrier - user and system owned
+  Netmon  - user and system owned
