@@ -1,8 +1,12 @@
 
-PORT    STATE SERVICE
-22/tcp  open  ssh
-80/tcp  open  http
-111/tcp open  rpcbind
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+111/tcp   open  rpcbind
+6697/tcp  open  ircs-u
+8067/tcp  open  infi-async
+59671/tcp open  unknown
+65534/tcp open  unknown
 
 djmardov@irked.htb
 
@@ -26,4 +30,7 @@ password "f00Ness";
 
 stskeeps is a user on port 8067
 bob@smithco.com is admin on port 8067
+
+found .backup file in djmardov/Documents folder.
+t's stego
 
