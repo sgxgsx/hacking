@@ -1,0 +1,81 @@
+OS
+	Distribution type & version
+		Debian GNU/Linux 8	
+	Kernel version
+		Linux version 3.16.0-6-686-pae i686
+		gcc version 4.9.2 (Debian 4.9.2-10+dev8u1)
+		SMP Debian 3.16.56-1+dev8u1
+	Enviromental variables:
+		MAIL=/var/mail/djmardov
+		PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+	printer?
+		no
+
+Applications & services
+	Services running and which user has privilege
+		statd      470  0.0  0.1   4580  2876 ?        Ss   17:27   0:00 /sbin/rpc.statd
+		root       485  0.0  0.0   2924   164 ?        Ss   17:27   0:00 /usr/sbin/rpc.i
+	root services
+	
+	which of them re vulnerable
+	
+	what applications are installed, their versions, which are running
+	/etc/security check it
+	any of the services settings misconfigured?
+	
+	any vulnerable plugins attached?
+	
+	what jobs re scheduled?
+	cat /etc/crontab
+		17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+		25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+		47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+		52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+		
+		30 7    * * *   root	test -x /etc/init.d/anacron && /usr/sbin/invoke-rc.d anacron start >/dev/null
+		/usr/sbin/invoke-rc.d ??
+	
+	any plain text usernames / passwords?
+	
+Communications & Networking
+	NICs && is it connected to another network?
+	
+	Network configuration settings
+	
+	DHCP server, DNS server, Gateway?
+	
+	What other users & hosts are communicating with the system
+	
+	What's cached? Ip and/or MAC address
+	
+	Is packet sniffing possible? What can be seen?
+	
+	Have u got a shell? Can u interact with system?
+	yes
+	Is port forwarding possible? Redirect and interact with traffic from another view
+	
+	Is tunnelling possible? Send commands locally, remotely
+	
+Confidential Information & Users
+	Who are you? Who is logged in? Who has been logged in? Who else is there? Who can do what?
+		uid=1000(djmardov) gid=1000(djmardov) groups=1000(djmardov),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),108(netdev),110(lpadmin),113(scanner),117(bluetooth
+		There is a backup, games, mail users
+		
+
+	What sensitive files can be found?
+		/var/spool/mail -> ../mail
+	Anything "interesting" in the home directorie(s)? If it's possible to access
+		/home/djmardov/.local/share/gvfs-metadata
+		/home/djmardov/.local/share/keyrings
+		/var/backups
+		/etc/ssh/
+		
+		Didn't work
+
+	Are there any passwords in; scripts, databases, configuration files or log files? Default paths and locations for passwords
+	-
+	What has the user being doing? Is there any password in plain text? What have they been edting?
+	
+	Can private-key information be found?
+	
+File Systems

@@ -1,0 +1,28 @@
+OS
+	Distribution type & version
+	
+	Kernel version
+	
+	Enviromental variables:
+	
+	printer?
+
+Applications & services
+	Services running and which user has privilege
+	
+	root services
+	
+	which of them re vulnerable
+	
+	what applications are installed, their versions, which are running
+	
+	any of the services settings misconfigured?
+	
+	any vulnerable plugins attached?
+	
+	what jobs re scheduled?
+	
+	any plain text usernames / passwords?
+	
+Communications & Networking
+	
