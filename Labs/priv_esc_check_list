@@ -25,4 +25,38 @@ Applications & services
 	any plain text usernames / passwords?
 	
 Communications & Networking
+	NICs && is it connected to another network?
+	
+	Network configuration settings
+	
+	DHCP server, DNS server, Gateway?
+	
+	What other users & hosts are communicating with the system
+	
+	What's cached? Ip and/or MAC address
+	
+	Is packet sniffing possible? What can be seen?
+	
+	Have u got a shell? Can u interact with system?
+	
+	Is port forwarding possible? Redirect and interact with traffic from another view
+	
+	Is tunnelling possible? Send commands locally, remotely
+	
+Confidential Information & Users
+
+	Who are you? Who is logged in? Who has been logged in? Who else is there? Who can do what?
+		
+
+	What sensitive files can be found?
+		
+	Anything "interesting" in the home directorie(s)? If it's possible to access
+		
+	Are there any passwords in; scripts, databases, configuration files or log files? Default paths and locations for passwords
+	
+	What has the user being doing? Is there any password in plain text? What have they been edting?
+	
+	Can private-key information be found?
+	
+File Systems
 	

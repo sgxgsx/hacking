@@ -9,3 +9,5 @@ hackthebox machines:
   Teacher - user and system owned
   Carrier - user and system owned
   Netmon  - user and system owned
+  Irked   - user and systen owned
+
