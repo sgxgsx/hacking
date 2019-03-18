@@ -1,0 +1,12 @@
+[0;32m---------------------Recon Recommendations----------------------
+[0m
+[0m
+[0;33mWeb Servers Recon:
+[0m
+gobuster -w /usr/share/wordlists/dirb/common.txt -t 30 -x html,php -u http://10.10.10.150:80 -o recon/gobuster_10.10.10.150_80.txt
+nikto -host 10.10.10.150:80 | tee recon/nikto_10.10.10.150_80.txt
+
+joomscan --url 10.10.10.150:80 | tee recon/joomscan_10.10.10.150_80.txt
+
+
+
