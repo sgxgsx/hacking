@@ -1,0 +1,11 @@
+Metasploit // Cobalt Strike
+ATT&CK framework
+Empire framework
+dnscat2 tool for evading detection during post-exploitation
+p0wnedShell
+Pupy Shell
+PoshC2
+Merlin
+Nishang
+
+

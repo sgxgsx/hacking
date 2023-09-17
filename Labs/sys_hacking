@@ -1,0 +1,33 @@
+Cracking passwords
+Priv escalation
+executing apps
+hiding files
+covering tracks
+
+
+Password attack types:
+  Non-electronic
+    Social engineering
+  active online
+    Dict attack
+    brute force
+    hash injection
+  passive online
+    wire sniffing
+    mitm
+      SSL Strip
+      Burp
+      BeEF
+    Replay attack
+  default password
+    cirt.net
+    default-password.info
+    passwordsdatabase.com
+  offline
+    pre-computed hashes and rainbow tables
+      john
+      winrtgen
+      rtgen
+      hashcat
+    Distributed Network Attack
+    

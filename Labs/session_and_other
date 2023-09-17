@@ -1,0 +1,116 @@
+Session hijacking techniques
+	Stealing
+	Guessing
+	Brute forcing
+
+Session hijacking process
+	snifing
+	monitoring
+	sesdion desynchronization
+	session id
+	command injection
+
+Types of attack
+	Active attack
+	Passive attack
+
+Session Hijacking in OSI
+	Network level hijacking TCP or UDP session
+	3-way handshake
+	tcp/ip hijacking
+	RST hijacking
+	sorce routing
+	blind hijacking
+	udp hijacking
+	forged icmp and arp spoofing
+
+Application level hijacking HTTPS or other session
+	Using sniffing
+	predicting session token
+	MITM
+	MITB
+	XSS
+	Malicious JS
+	Trojans
+	CSRF
+	Session replay attack
+	session fixation
+
+
+Avaiding Firewalls and ids/ips
+
+ways to detect intrusion
+	signature-based
+	policy-based
+	anomaly-based
+	reputation based
+
+types of ids/ips
+	file system monitoring
+	log files analysis
+	connection analysis
+	kernel level detection
+
+Firewall architecture
+	Bastion host
+	Screened subnet
+	multi-homed firewall
+	DMZ
+
+Types of firewalls
+	packet filtering firewall
+	cicuit-level gateway firewall
+	application-level firewall
+	stateful multiplayer inspection firewall
+	transparent firewall
+	Next generation firewall
+	personal firewall
+
+Types of honeypots
+	high-interaction honeypot
+	low-interaction honeypot
+
+
+IDS, Firewall, Honeypot
+IDS/IPS - Snort
+
+firewall
+	ZoneAlarm PRO Firewall 2015
+	Comodo Firewall
+	Cisco ASA 1000V Cloud Firewall
+
+honeypot tools
+	KFSensor
+	SPECTER
+	PatriotBox
+	HIHAT
+
+IDS evasion
+	Insertion attack
+	evasion
+	fragmentation attack
+	DoS attack
+	obfuscating
+	false positive generation
+	session splicing
+	unicode evasion technique
+
+Firewall evasion
+	Firewall identification
+	port scanning
+	fire walking
+	banner grabbing
+	ip address spoofing
+	source routing
+	Bypassing techniques
+	bypass using ip address
+	using proxy
+	using SSH
+	through external systems
+	ICMP tunneling mode
+	HTTP tunneling mode
+Tools for http tunneling mode
+	HTTPort
+	HTTHost
+	Super Network Tunnel
+	HTTP-Tunnel

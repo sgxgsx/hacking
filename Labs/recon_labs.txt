@@ -1,0 +1,57 @@
+ping www.certifiedhacker.com
+ping www.certifiedhacker.com -f -s 1472  ! not -l, -l is used in windows
+ping www.certifiedhacker.com -t 3 -c 1   ! not -i and -n, used in windows
+27 hops
+traceroute www.certifiedhacker.com
+
+nslookup
+set type=a
+www.certifiedhacker.com      -> unauthoritative answer
+set type=cname
+www.certifiedhacker.com      -> authoritative answer
+
+
+Lab 2
+
+pipl.com                            -> a brilliant source
+
+Lab 3
+firebug .... used wig
+
+Lab 4
+extract data... used wig, metagoofil (couldn't scrap emails, idk y)
+
+Lab 5
+mirror a site
+httrack or webhttrack
+
+Lab 6
+Trace email. easy
+
+Lab 7
+whois or (i would use maltego)
+
+Lab 8
+traceroute
+
+Lab 9
+maltego
+
+Lab 10
+recon-ng network reconnaissance
+
+Lab 11
+recon-ng personnel info gathering
+recon/domains-contacts/whois_pocs
+recon/profiles-profiles/profiler
+recon/profiles-profiles/namechk
+
+Lab 12
+recon-ng locations
+
+Lab 13
+foca
+
+Lab 14
+vulnerability identification
+SearchDiggity was suggested to be used, but i've found zoomeye.org and seebug.org
