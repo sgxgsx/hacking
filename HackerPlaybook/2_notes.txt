@@ -1,0 +1,39 @@
+nmap diffing
+github.com/ChrisTruncer/EyeWitness
+
+ip ranges:
+	Amazon: http://bit.ly/2vUSjED
+	Azure: http://bit.ly/2r7rHeR
+	Google Cloud: http://bit.ly/2HAsZFm
+
+shodan.io
+censys.io
+manually parsing ssl certificates:
+	github.com/cheetz/sslScreape
+
+Subdomain discovery:
+	github.com/leebaird/discover
+	knock (find it)
+	Sublist3r
+	SubBrute
+	Lists:
+		http://bit.ly/2qwxrxB
+		https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
+
+github
+	site:github.com + "name"
+	Truffle Hog
+
+S3 Bucket enumeration
+	Bucket Finder
+	Modify Access Controls in aws buckets
+	subdomain takeovers
+
+Email
+	SimplyEmail
+
+Past breaches
+OSINT
+	https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
+	OSINT Framework
+

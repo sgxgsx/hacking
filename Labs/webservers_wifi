@@ -1,0 +1,47 @@
+Web server attacks
+	DoS/DDoS attacks
+	DNS server hijacking
+	DNS Amplification attack
+	directory traversing attack
+	MITM
+	phishing attack
+	website defacement
+	web server misconfiguration
+	HTTP response splitting
+	web cache poisoning
+	ssh brute-force attack
+	Web application attacks
+	Cookie Tampering
+	DoS Attack
+	SQL Injection
+	Session hijacking
+	Cross-Site Request Forgery (CSRF) attack
+	Cross-Site Scripting (XSS) attack
+	Buffer Overflow
+
+
+SQL injection types
+	In-band injection
+	Union based
+	Error based
+Inferential injection (blind)
+	Time based
+	Boolean based
+Out-of-band injection
+
+Wifi attacks
+	availability attacks
+	authentication attacks
+	rogue access point attack
+	client mis-association
+	misconfigured AP attack
+	unauthorithed association
+	ad hoc connection attack
+	jamming signal attack
+
+Bluetooth
+	bluesmacking
+	bluebugging
+	bluejacking
+	blueprinting
+	bluesnarfing

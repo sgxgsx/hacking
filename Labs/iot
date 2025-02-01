@@ -1,0 +1,32 @@
+
+IoT attack areas
+	Device memory containing credentials.
+	Access Control.
+	Firmware Extraction.
+	Privileges Escalation.
+	Resetting to an insecure state.
+	Removal of storage media.
+	Web Attacks.
+	Firmware Attacks.
+	Network Services Attacks.
+	Unencrypted Local Data Storage.
+	Confidentiality and Integrity issues.
+	Cloud Computing Attacks.
+	Malicious updates.
+	Insecure APIs.
+	Mobile Application threats.
+
+IoT attacks
+	DDoS
+	Rolling code attack
+	blueborn attack
+	jamming attack
+	Eavesdropping
+	Sybil Attack
+	Exploit Kits
+	Man-in-the-Middle Attack
+	Replay Attack
+	Forged Malicious Devices
+	Side Channel Attack
+	Ransomware Attack
+

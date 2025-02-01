@@ -1,0 +1,82 @@
+
+  Stored Credentials                                             Kernel and driver vulneravilities
+                                        Privilege Escalation 
+  Tricking priv. process to do smth                              Abusing Windows privileges
+
+https://offzone.moscow/ru/report/hunting-for-privilege-escalation-in-windows-environment/
+
+
+Theory:                                           ----------------------------------------------------------------------
+
+Mandatory integrity control:
+untrusted   S-1-16-0
+low         S-1-16-4096
+medium      S-1-16-8192
+high        S-1-16-12288
+system      S-1-16-16384
+
+Stored credentials. Files:                           ------------------------------------------------------------------------
+
+C:\sysprep\sysprep.xml
+C:\sysprep\sysprep.inf
+C:\sysprep.inf
+C:\unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unat
+tend.xml
+
+Stored Credentials. Files. Group Policy Preferences:
+
+Policy preference files are located:
+• C:\ProgramData\Microsoft\Group Policy\History\????\Machine\Preferences\Groups\Groups.xml
+• \\????\SYSVOL\\Policies\????\Machine\Preferences\Groups\Groups.xml
+Also several other policy preference files can be useful:
+• Services\Services.xml
+• ScheduledTasks\ScheduledTasks.xml
+• Printers\Printers.xml
+• Drives\Drives.xml
+• DataSources\DataSources.xml
+encryption key is hardcoded and published by Microsoft
+
+Stored Credentials. Registry
+
+
+Tricking some privileged processes into executing arbitrary code            ----------------------------------------------
+
+Service registry permissions weakness:
+
+Windows stores local service configuration HKLM\SYSTEM\CurrentControlSet\Services.
+
+Cache information about started processes
+
+Service permissions weakness
+Unquoted service path
+Modifiable service binary
+Privilege escalation via weak permissions. Accesschk tool usage.
+
+Kernel and driver vulnerabilities                                 -------------------------------------------------------
+
+Windows Kernel and 3 rd -party drivers exploits
+Possible kernel shellcodes, that can be used for LPE:
+• Token stealing (replacing token of some process with SYSTEM token);
+• Nulling out ACLs (null DACL everybody can access an object); means that everybody can access an object);
+• Changing objects’ ACLs (gives full access to arbitrary object, e.g. to the process with SYSTEM privileges, disable auditing);
+• Changing tokens (new groups, new “super” privileges, increasing integrity level, changing user SID);
+
+Token swapping, using Mimikatz driver
+
+Abusing Windows privileges                           ---------------------------------------------------------------------
+Table in a link. pribileges:
+SeDebugPrivilege
+SeImpersonatePrivilege
+SeAssignPrimaryPrivilege
+SeTakeOwnershipPrivilege
+SeRestorePrivilege
+SeBackupPrivilege
+SeLoadDriver
+SeCreateTokenPrivilege
+SeTcbPrivilege
+
+Abusing debug privilege
+Abusing impersonation
+Abusing impersonation + debug privileges. Incognito
